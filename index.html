@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WDD 231 | Course Home - Carol Vigil</title>
+<meta name="description" content="WDD 231 course home page with responsive navigation, course list, and project links.">
+<meta name="author" content="Carol Vigil">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="styles/larger.css">
+<link rel="stylesheet" href="styles/small.css">
+
+
+<script src="scripts/navigation.js" defer></script>
+<script src="scripts/dates.js" defer></script>
+<script src="scripts/courses.js" defer></script>
+</head>
+<body>
+<header>
+<div class="branding">
+<img src="images/logo.svg" alt="Site logo" width="48" height="48">
+<span>Carol Vigil</span>
+</div>
+<button id="menu" aria-label="Menu" aria-expanded="false">☰</button>
+<nav id="primary-nav" data-state="closed">
+<ul>
+<li><a href="./">Home</a></li>
+<li><a href="chamber/">Chamber</a></li>
+<li><a href="final/">Final</a></li>
+</ul>
+</nav>
+</header>
+
+
+<main>
+<h1>Home</h1>
+
+
+<section>
+<h2>Welcome</h2>
+<picture>
+<img src="images/profile.webp" alt="Your portrait" width="320" height="320">
+</picture>
+<p>Hi! I'm <strong>Carol Vigil</strong>. This is my WDD 231 home page where I showcase my projects and track course progress.</p>
+</section>
+
+
+<section>
+<h2>Certificate Courses</h2>
+<div class="controls">
+<button class="filter active" data-filter="all">All</button>
+<button class="filter" data-filter="WDD">WDD</button>
+<button class="filter" data-filter="CSE">CSE</button>
+</div>
+<div id="courses"></div>
+<p>Total Credits: <span id="credit-total">0</span></p>
+</section>
+
+
+<section>
+<h2>Resources</h2>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">MDN HTML</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener">MDN CSS</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">MDN JavaScript</a></li>
+</ul>
+</section>
+</main>
+
+
+<footer>
+<p>
+<a href="https://github.com/yourusername/wdd231" target="_blank" rel="noopener">GitHub</a> |
+<a href="https://www.linkedin.com/in/yourprofile/" target="_blank" rel="noopener">LinkedIn</a>
+</p>
+<p><span id="copyright"></span> • Carol Vigil • Peru</p>
+<p id="lastModified"></p>
+</footer>
+</body>
+</html>

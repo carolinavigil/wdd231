@@ -1,0 +1,17 @@
+@media (min-width: 700px) {
+.site-header { grid-template-columns: auto 1fr auto; }
+.menu { display: none; }
+.nav { grid-column: auto; display: block !important; }
+.nav ul { display: flex; gap: .5rem; }
+.nav a { background: transparent; }
+
+
+.intro-grid { grid-template-columns: 240px 1fr; }
+.courses-grid { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+
+
+/* At ≥ 1100px, widen intro image slightly */
+@media (min-width: 1100px) {
+.intro-grid { grid-template-columns: 300px 1fr; }
+}

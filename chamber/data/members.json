@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Tech Solutions",
+    "address": "123 Main St, Cityville",
+    "phone": "555-123-4567",
+    "website": "https://techsolutions.com",
+    "image": "images/tech.png",
+    "membership": 3
+  },
+  {
+    "name": "Green Foods Market",
+    "address": "456 Oak Ave, Cityville",
+    "phone": "555-987-6543",
+    "website": "https://greenfoods.com",
+    "image": "images/greenfoods.png",
+    "membership": 2
+  },
+  {
+    "name": "Downtown Fitness",
+    "address": "789 Pine Rd, Cityville",
+    "phone": "555-555-1212",
+    "website": "https://downtownfitness.com",
+    "image": "images/fitness.png",
+    "membership": 1
+  }
+]

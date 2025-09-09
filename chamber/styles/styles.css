@@ -54,3 +54,11 @@ nav a {
   max-width: 100%;
   height: auto;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}

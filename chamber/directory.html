@@ -26,11 +26,24 @@
 </head>
 <body>
   <header>
-    <main>
-      <h1>Chamber of Commerce Directory</h1>
-      <section class="directory">  
-      </section>
-    </main>
+    <nav>
+      <!-- navegación -->
+    </nav>
+  </header>
+
+  <main>
+    <!-- 👇 Aquí va el h1 como primer elemento -->
+    <h1>Chamber of Commerce Directory</h1>
+
+    <section class="view-toggle">
+      <button id="grid">Grid View</button>
+      <button id="list">List View</button>
+    </section>
+
+    <section id="members" class="directory grid">
+      <!-- Aquí se cargarán los miembros con JS -->
+    </section>
+  </main>
     <nav>
       <button id="menu-button">☰</button>
       <ul id="menu" class="nav-links">

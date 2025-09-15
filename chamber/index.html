@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Miguel Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/chamber.css" />
+</head>
+<body>
+  <header>
+    <h1>San Miguel Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="San Miguel view" />
+      <a href="join.html" class="cta">Join the Chamber</a>
+    </section>
+
+    <!-- Current Events -->
+    <section class="events">
+      <h2>Upcoming Events</h2>
+      <p>Business Networking Night - Sept 20</p>
+      <p>Community Clean-up - Oct 2</p>
+    </section>
+
+    <!-- Weather -->
+    <section class="weather">
+      <h2>Current Weather</h2>
+      <div id="weather-data">
+        <p>Temperature: -- °F</p>
+        <p>Description: --</p>
+        <div id="forecast"></div>
+      </div>
+    </section>
+
+    <!-- Spotlights -->
+    <section class="spotlights">
+      <h2>Member Spotlights</h2>
+      <div id="spotlight-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> San Miguel Chamber of Commerce</p>
+  </footer>
+
+  <script src="scripts/spotlights.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

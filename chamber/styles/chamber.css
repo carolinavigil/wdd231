@@ -1,0 +1,107 @@
+/* Reset */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f6f7fb;
+  color: #222;
+}
+
+/* Header & Nav */
+header {
+  background: #004080;
+  color: #fff;
+  padding: 1rem;
+}
+header h1 { margin: 0; }
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+nav a.active { text-decoration: underline; }
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+}
+.hero img {
+  width: 100%;
+  height: auto;
+}
+.hero .cta {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff9800;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Sections */
+section { padding: 2rem 1rem; }
+section h2 { margin-top: 0; }
+
+/* Spotlights Grid */
+#spotlight-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 600px) {
+  #spotlight-container { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 992px) {
+  #spotlight-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Spotlight Cards */
+.spotlight-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(18, 38, 63, 0.06);
+}
+.spotlight-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #eee;
+}
+.spotlight-card h3 { margin: 0.5rem 0; }
+.spotlight-card a {
+  display: block;
+  color: #0056b3;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+.spotlight-card .level {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.85rem;
+  color: #fff;
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+.level.gold { background: #c79200; }
+.level.silver { background: #8aa3c7; color: #07203a; }
+
+/* Footer */
+footer {
+  background: #004080;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+

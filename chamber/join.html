@@ -1,254 +1,160 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="author" content="Carol Vigil"> 
-  <meta name="description" content="Become a member of the San Miguel Chamber of Commerce to grow your business, connect with local leaders, and access exclusive member benefits.">
-  <title>Join the San Miguel Chamber of Commerce</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <meta property="og:title" content="Join the San Miguel Chamber of Commerce">
-  <meta property="og:description" content="Join the San Miguel Chamber of Commerce to connect with local businesses, access resources, and enjoy membership benefits that support growth and community impact.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber — Join</title>
+  <meta name="description" content="Apply to become a member of the Town Chamber of Commerce by completing the membership application form. Choose the level that fits your organization.">
+  <meta name="author" content="Carol Vigil">
+  <link rel="icon" href="images/favicon.ico">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Join the Chamber of Commerce">
+  <meta property="og:description" content="Become part of the Chamber of Commerce and enjoy benefits like events, training, advertising, and more. Apply now!">
   <meta property="og:image" content="images/social-preview.png">
-  <meta property="og:url" content="https://carolinavigil.github.io/chamber/join.html">
-  <style>
-    :root{
-      --primary:#0b69ff;
-      --muted:#f5f7fb;
-      --text:#111;
-      --card-bg:#fff;
-      --gap:1rem;
-      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-    *{box-sizing:border-box}
-    body{margin:0;background:var(--muted);color:var(--text);line-height:1.4}
-    header{background:var(--primary);color:#fff;padding:1rem}
-    .container{max-width:1100px;margin:1.25rem auto;padding:1rem}
-    .layout{display:grid;gap:var(--gap);grid-template-columns:1fr}
-    @media(min-width:900px){.layout{grid-template-columns:2fr 1fr;align-items:start}}
+  <meta property="og:url" content="https://tusitio.github.io/chamber/join.html">
 
-    /* form styles */
-    form{background:var(--card-bg);padding:1rem;border-radius:.5rem;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-    label{display:block;margin-bottom:.75rem}
-    label > span{display:block;font-size:.85rem;margin-bottom:.25rem}
-    input[type="text"], input[type="email"], input[type="tel"], textarea, select{
-      width:100%;padding:.6rem;border:1px solid rgba(0,0,0,.12);border-radius:.35rem;font:inherit
-    }
-    textarea{min-height:100px}
-    .row{display:grid;grid-template-columns:1fr;gap:.5rem}
-    @media(min-width:600px){.row{grid-template-columns:1fr 1fr}}
-
-    .membership-cards{display:grid;gap:var(--gap);margin-top:1rem}
-    @media(min-width:900px){.membership-cards{margin-top:0}}
-    .card{background:var(--card-bg);padding:1rem;border-radius:.5rem;box-shadow:0 6px 16px rgba(0,0,0,.05);display:flex;flex-direction:column;justify-content:space-between}
-    .card h3{margin:.25rem 0}
-    .card p{margin:.5rem 0;font-size:.95rem}
-    .card a{display:inline-block;margin-top:.5rem}
-
-    /* initial animation for cards */
-    @keyframes liftFade{
-      from{opacity:0;transform:translateY(12px)}
-      to{opacity:1;transform:none}
-    }
-    .card{animation:liftFade 700ms ease-out both}
-    .card:nth-child(1){animation-delay:100ms}
-    .card:nth-child(2){animation-delay:250ms}
-    .card:nth-child(3){animation-delay:400ms}
-    .card:nth-child(4){animation-delay:550ms}
-
-    /* dialog/backdrop styles */
-    dialog{border:none;border-radius:.5rem;padding:1rem;max-width:600px;width:calc(100% - 2rem)}
-    dialog::backdrop{background:rgba(0,0,0,.5)}
-    .dialog-close{margin-top:1rem}
-
-    .submit-row{text-align:right;margin-top:1rem}
-    input[type="submit"]{background:var(--primary);color:#fff;padding:.6rem 1rem;border:none;border-radius:.35rem;cursor:pointer}
-    input[type="submit"]:focus{outline:3px solid rgba(11,105,255,.18)}
-
-    /* small helpers */
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-  </style>
+  <link rel="stylesheet" href="styles/base.css">
+  <script defer src="scripts/join.js"></script>
 </head>
 <body>
   <header>
-  <a href="index.html" class="logo">Town Chamber of Commerce</a>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html" class="active">Join</a></li>
-    </ul>
-  </nav>
+    <h1>Join the Chamber of Commerce</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="join.html" class="active">Join</a></li>
+      </ul>
+    </nav>
   </header>
-  
 
-  <main class="container">
-    <h1>Join the Town Chamber of Commerce</h1>
-    <h2>Join the Chamber</h2>
-    <div class="layout">
-      <!-- form column -->
-      <form method="get" action="thankyou.html" novalidate aria-labelledby="join-heading">
-        <h3 id="join-heading">Membership Application</h3>
-
-        <div class="row">
-          <label>
-            <span>First name *</span>
-            <input type="text" name="firstName" required title="Applicant's first name" autocomplete="given-name">
-          </label>
-
-          <label>
-            <span>Last name *</span>
-            <input type="text" name="lastName" required title="Applicant's last name" autocomplete="family-name">
-          </label>
-        </div>
-
+  <main>
+    <section class="form-section">
+      <h2>Membership Application</h2>
+      <form method="get" action="thankyou.html">
         <label>
-          <span>Organizational title</span>
-          <input type="text" name="orgTitle" title="Organization title (letters, hyphens, spaces, min 7 chars)" autocomplete="organization-title" pattern="^[A-Za-z\s-]{7,}$" placeholder="e.g. Community Outreach Director">
+          First Name:
+          <input type="text" name="first" title="Enter your first name" autocomplete="given-name" required>
         </label>
 
         <label>
-          <span>Email address *</span>
-          <input type="email" name="email" required title="Email address" autocomplete="email" placeholder="name@example.com">
+          Last Name:
+          <input type="text" name="last" title="Enter your last name" autocomplete="family-name" required>
         </label>
 
         <label>
-          <span>Mobile phone *</span>
-          <input type="tel" name="mobile" required title="Mobile phone" autocomplete="tel">
+          Organization Title:
+          <input type="text" name="orgtitle" title="Enter your organizational title" autocomplete="organization-title"
+            pattern="[A-Za-z\s-]{7,}">
         </label>
 
         <label>
-          <span>Business / Organization name *</span>
-          <input type="text" name="businessName" required title="Business or organization name" autocomplete="organization">
+          Email:
+          <input type="email" name="email" title="Enter your email address" autocomplete="email"
+            placeholder="you@example.com" required>
         </label>
-
-        <fieldset>
-          <legend>Membership level</legend>
-          <label><input type="radio" name="membership" value="np" checked> NP (Non-profit — no fee)</label><br>
-          <label><input type="radio" name="membership" value="bronze"> Bronze</label><br>
-          <label><input type="radio" name="membership" value="silver"> Silver</label><br>
-          <label><input type="radio" name="membership" value="gold"> Gold</label>
-        </fieldset>
 
         <label>
-          <span>Business / Organization description</span>
-          <textarea name="description" title="Short description of your business"></textarea>
+          Mobile Phone:
+          <input type="tel" name="phone" title="Enter your mobile phone" autocomplete="tel" required>
         </label>
 
-        <!-- timestamp (hidden) filled by JS -->
+        <label>
+          Organization Name:
+          <input type="text" name="organization" title="Enter your organization name" autocomplete="organization" required>
+        </label>
+
+        <label>
+          Membership Level:
+          <select name="membership" title="Select your membership level" required>
+            <option value="">Choose a level</option>
+            <option value="NP">NP Membership (Non-Profit)</option>
+            <option value="Bronze">Bronze</option>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+          </select>
+        </label>
+
+        <label>
+          Organization Description:
+          <textarea name="description" title="Describe your organization"></textarea>
+        </label>
+
         <input type="hidden" id="timestamp" name="timestamp">
 
-        <div class="submit-row">
-          <input type="submit" value="Submit application">
-        </div>
+        <button type="submit">Submit Application</button>
       </form>
+    </section>
 
-      <!-- membership cards column -->
-      <aside>
-        <div class="membership-cards" aria-label="Membership options">
-          <article class="card" role="group">
-            <h3>NP Membership</h3>
-            <p>No fee. Listings in the directory and community support.</p>
-            <a href="#" class="open-modal" data-modal="modal-np">Benefits &nbsp;→</a>
-          </article>
-
-          <article class="card" role="group">
-            <h3>Bronze</h3>
-            <p>Basic listing and occasional promotional shout-outs.</p>
-            <a href="#" class="open-modal" data-modal="modal-bronze">Benefits &nbsp;→</a>
-          </article>
-
-          <article class="card" role="group">
-            <h3>Silver</h3>
-            <p>Enhanced directory placement, event discounts.</p>
-            <a href="#" class="open-modal" data-modal="modal-silver">Benefits &nbsp;→</a>
-          </article>
-
-          <article class="card" role="group">
-            <h3>Gold</h3>
-            <p>Featured spotlight on home page, sponsorship priority.</p>
-            <a href="#" class="open-modal" data-modal="modal-gold">Benefits &nbsp;→</a>
-          </article>
-        </div>
-      </aside>
-    </div>
-
-    <!-- dialogs (one per membership) -->
-    <dialog id="modal-np" aria-labelledby="np-title">
-      <h3 id="np-title">NP Membership — Benefits</h3>
-      <p>Non-profit organizations receive a free directory listing, access to community resources, and invitations to networking events.</p>
-      <button class="dialog-close" data-close>Close</button>
-    </dialog>
-
-    <dialog id="modal-bronze" aria-labelledby="bronze-title">
-      <h3 id="bronze-title">Bronze — Benefits</h3>
-      <p>Bronze members receive standard directory listings and occasional promotion on chamber social media channels.</p>
-      <button class="dialog-close" data-close>Close</button>
-    </dialog>
-
-    <dialog id="modal-silver" aria-labelledby="silver-title">
-      <h3 id="silver-title">Silver — Benefits</h3>
-      <p>Silver members get enhanced placement in the directory, event discounts, and a small advertising credit.</p>
-      <button class="dialog-close" data-close>Close</button>
-    </dialog>
-
-    <dialog id="modal-gold" aria-labelledby="gold-title">
-      <h3 id="gold-title">Gold — Benefits</h3>
-      <p>Gold members receive featured home page spotlights, priority sponsorship opportunities, and extended promotional support.</p>
-      <button class="dialog-close" data-close>Close</button>
-    </dialog>
-
+    <aside class="membership-cards">
+      <h2>Membership Levels</h2>
+      <div class="card np">
+        <h3>NP Membership</h3>
+        <p>For non-profit organizations, free membership.</p>
+        <a href="#" data-modal="npModal">View Benefits</a>
+      </div>
+      <div class="card bronze">
+        <h3>Bronze Membership</h3>
+        <p>Affordable membership with entry benefits.</p>
+        <a href="#" data-modal="bronzeModal">View Benefits</a>
+      </div>
+      <div class="card silver">
+        <h3>Silver Membership</h3>
+        <p>Enhanced benefits for growing businesses.</p>
+        <a href="#" data-modal="silverModal">View Benefits</a>
+      </div>
+      <div class="card gold">
+        <h3>Gold Membership</h3>
+        <p>Premium benefits for maximum visibility.</p>
+        <a href="#" data-modal="goldModal">View Benefits</a>
+      </div>
+    </aside>
   </main>
 
-  <script>
-    // fill timestamp when page loads
-    document.addEventListener('DOMContentLoaded', function(){
-      const ts = document.getElementById('timestamp');
-      if(ts){ ts.value = new Date().toISOString(); }
-
-      // open modal handlers
-      document.querySelectorAll('.open-modal').forEach(function(btn){
-        btn.addEventListener('click', function(e){
-          e.preventDefault();
-          const id = this.dataset.modal;
-          const d = document.getElementById(id);
-          if(d && typeof d.showModal === 'function'){
-            d.showModal();
-            // move focus into dialog
-            const focusable = d.querySelector('button, [href], input, textarea, select');
-            if(focusable) focusable.focus();
-          } else if(d){
-            // fallback: make visible
-            d.setAttribute('open','');
-          }
-        });
-      });
-
-      // close dialog handlers
-      document.querySelectorAll('dialog [data-close]').forEach(function(btn){
-        btn.addEventListener('click', function(){
-          const dialog = this.closest('dialog');
-          if(dialog){ dialog.close(); }
-        });
-      });
-
-      // close dialogs when clicking backdrop (works with native dialog)
-      document.querySelectorAll('dialog').forEach(function(d){
-        d.addEventListener('cancel', function(e){ /* allow escape to close */ });
-      });
-    });
-  </script>
   <footer>
-  <p>&copy; <span id="year"></span> San Miguel Chamber of Commerce</p>
-  <p>Last Updated: <span id="lastModified"></span></p>
+    <p>&copy; <span id="year"></span> Town Chamber of Commerce | Last Modified: <span id="lastModified"></span></p>
   </footer>
 
-  <script>
-  // Insertar año actual y última modificación automáticamente
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
+  <!-- Modals -->
+  <dialog id="npModal">
+    <h3>NP Membership Benefits</h3>
+    <ul>
+      <li>Free membership</li>
+      <li>Community events</li>
+      <li>Basic directory listing</li>
+    </ul>
+    <button onclick="document.getElementById('npModal').close()">Close</button>
+  </dialog>
 
+  <dialog id="bronzeModal">
+    <h3>Bronze Membership Benefits</h3>
+    <ul>
+      <li>Event discounts</li>
+      <li>Newsletter features</li>
+      <li>Training workshops</li>
+    </ul>
+    <button onclick="document.getElementById('bronzeModal').close()">Close</button>
+  </dialog>
+
+  <dialog id="silverModal">
+    <h3>Silver Membership Benefits</h3>
+    <ul>
+      <li>Advertising spotlight</li>
+      <li>Priority directory placement</li>
+      <li>Exclusive networking</li>
+    </ul>
+    <button onclick="document.getElementById('silverModal').close()">Close</button>
+  </dialog>
+
+  <dialog id="goldModal">
+    <h3>Gold Membership Benefits</h3>
+    <ul>
+      <li>Premium advertising</li>
+      <li>VIP event access</li>
+      <li>Personalized support</li>
+    </ul>
+    <button onclick="document.getElementById('goldModal').close()">Close</button>
+  </dialog>
 </body>
 </html>

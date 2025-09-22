@@ -4,8 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="author" content="Carol Vigil"> 
-  
-  <title>Chamber — Join</title>
+  <meta name="description" content="Become a member of the San Miguel Chamber of Commerce to grow your business, connect with local leaders, and access exclusive member benefits.">
+  <title>Join the San Miguel Chamber of Commerce</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <meta property="og:title" content="Join the San Miguel Chamber of Commerce">
+  <meta property="og:description" content="Join the San Miguel Chamber of Commerce to connect with local businesses, access resources, and enjoy membership benefits that support growth and community impact.">
+  <meta property="og:image" content="images/social-preview.png">
+  <meta property="og:url" content="https://carolinavigil.github.io/chamber/join.html">
   <style>
     :root{
       --primary:#0b69ff;
@@ -66,13 +71,20 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1> Town Chamber of Commerce</h1>
-      <p class="sr-only">Main navigation follows</p>
-    </div>
+  <a href="index.html" class="logo">Town Chamber of Commerce</a>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html" class="active">Join</a></li>
+    </ul>
+  </nav>
   </header>
+  
 
   <main class="container">
+    <h1>Join the Town Chamber of Commerce</h1>
     <h2>Join the Chamber</h2>
     <div class="layout">
       <!-- form column -->
@@ -227,5 +239,16 @@
       });
     });
   </script>
+  <footer>
+  <p>&copy; <span id="year"></span> San Miguel Chamber of Commerce</p>
+  <p>Last Updated: <span id="lastModified"></span></p>
+  </footer>
+
+  <script>
+  // Insertar año actual y última modificación automáticamente
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+
 </body>
 </html>

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "pl1",
+    "title": "Plaza Central",
+    "address": "Av. Principal 123, San Miguel",
+    "image": "images/plaza-central.webp",
+    "description": "Histórica plaza con mercados semanales y música en vivo los fines de semana."
+  },
+  {
+    "id": "pl2",
+    "title": "Museo Local",
+    "address": "Calle Museo 45, San Miguel",
+    "image": "images/museo-local.webp",
+    "description": "Museo pequeño que muestra la historia y las artesanías tradicionales de la región."
+  },
+  {
+    "id": "pl3",
+    "title": "Parque Ecológico",
+    "address": "Carretera Verde km 5",
+    "image": "images/parque-ecologico.webp",
+    "description": "Espacio natural ideal para caminatas, paseos en bicicleta y actividades familiares."
+  },
+  {
+    "id": "pl4",
+    "title": "Mercado Artesanal",
+    "address": "Jr. Comercio 220",
+    "image": "images/mercado-artesanal.webp",
+    "description": "Mercado lleno de artesanías locales, textiles y productos tradicionales."
+  },
+  {
+    "id": "pl5",
+    "title": "Centro Cultural",
+    "address": "Av. Cultura 98",
+    "image": "images/centro-cultural.webp",
+    "description": "Centro con exposiciones artísticas, talleres y presentaciones culturales."
+  },
+  {
+    "id": "pl6",
+    "title": "Mirador San Miguel",
+    "address": "Colina del Sol s/n",
+    "image": "images/mirador-san-miguel.webp",
+    "description": "Punto panorámico que ofrece una vista impresionante de toda la ciudad."
+  },
+  {
+    "id": "pl7",
+    "title": "Estadio Municipal",
+    "address": "Av. Deporte 500",
+    "image": "images/estadio-municipal.webp",
+    "description": "Estadio donde se realizan partidos de fútbol, conciertos y ferias locales."
+  },
+  {
+    "id": "pl8",
+    "title": "Catedral de San Miguel",
+    "address": "Plaza Central s/n",
+    "image": "images/catedral.webp",
+    "description": "Imponente catedral con arquitectura colonial y visitas guiadas diarias."
+  }
+]

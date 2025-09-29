@@ -1,0 +1,140 @@
+:root {
+  --primary: #0b5d3b;
+  --accent: #ffd166;
+  --bg: #f7f7f7;
+  --card-bg: #ffffff;
+  --gap: 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #222;
+}
+
+.site-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Header */
+header.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.logo {
+  width: 50px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 6px;
+}
+nav.primary a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+.muted { color: #666; }
+
+/* Layout */
+.discover-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "main"
+    "sidebar";
+  gap: var(--gap);
+  margin-top: 1rem;
+}
+.discover-main { grid-area: main; }
+.discover-sidebar { grid-area: sidebar; }
+
+/* Cards */
+.cards {
+  display: grid;
+  gap: 1rem;
+}
+.card {
+  background: var(--card-bg);
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.75rem;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+.card h2 {
+  margin: 0.25rem 0;
+  font-size: 1.05rem;
+  color: var(--primary);
+}
+.card address {
+  font-style: normal;
+  font-size: 0.9rem;
+  color: #666;
+}
+.card p { font-size: 0.95rem; }
+.card button {
+  background: var(--accent);
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar-box {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (min-width: 641px) {
+  .discover-grid {
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "main sidebar";
+  }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (hover: hover) {
+    .card img {
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+    .card img:hover {
+      transform: scale(1.03);
+      filter: brightness(0.95);
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .card {
+    grid-template-columns: 1fr;
+  }
+  .card img {
+    height: 160px;
+  }
+}
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #666;
+}

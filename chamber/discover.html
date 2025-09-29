@@ -3,6 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Descubre San Miguel: conoce la plaza central, museos, parques y lugares destacados que hacen de nuestra ciudad un gran lugar para vivir y visitar.">
+  <meta name="author" content="Cris Carolina Vigil Acuña">
+  <meta property="og:title" content="Discover San Miguel - Chamber of Commerce">
+  <meta property="og:description" content="Explore San Miguel through its history, culture, and vibrant community. Discover landmarks, parks, and attractions that make our city a great place to visit and live.">
+  <meta property="og:image" content="images/social-preview.png">
+  <meta property="og:url" content="https://tusitio.github.io/chamber/discover.html">
   <title>Discover San Miguel - Cámara de Comercio</title>
   <link rel="stylesheet" href="styles/discover.css">
   <link rel="icon" href="images/favicon-16x16.ico" type="image/x-icon" />
@@ -27,7 +33,7 @@
 
     <div class="discover-grid">
       <main class="discover-main">
-        <h2>Discover San Miguel</h2>
+        <h1>Discover San Miguel Chamber of Commerce</h1>
         <p class="muted">Explore eight beautiful places.</p>
         <section class="cards" id="cards">
           <!-- Aquí se insertan las tarjetas con JS -->
@@ -45,61 +51,7 @@
       <small>&copy; 2025 San Miguel Chamber of Commerce</small>
     </footer>
   </div>
-
-  <script>
-    // ---- Mensaje con localStorage ----
-    (function(){
-      const KEY = 'chamber-last-visit';
-      const now = Date.now();
-      const visitText = document.getElementById('visitText');
-
-      try{
-        const last = localStorage.getItem(KEY);
-        if(!last){
-          visitText.textContent = '¡Bienvenido! Déjanos saber si tienes alguna pregunta.';
-        } else {
-          const diffMs = now - parseInt(last,10);
-          const days = Math.floor(diffMs / (1000*60*60*24));
-          if(days < 1){
-            visitText.textContent = '¡De vuelta tan pronto! ¡Genial!';
-          } else if(days === 1){
-            visitText.textContent = 'Tu última visita fue hace 1 día.';
-          } else {
-            visitText.textContent = 'Tu última visita fue hace ' + days + ' días.';
-          }
-        }
-      } catch(e){
-        visitText.textContent = 'Bienvenido — no se pudo leer el historial.';
-      }
-      try{ localStorage.setItem(KEY, String(now)); }catch(e){}
-    })();
-
-    // ---- Cargar tarjetas desde JSON ----
-    (function(){
-      const cardsEl = document.getElementById('cards');
-      fetch("data/places.json")
-        .then(r => r.json())
-        .then(data => {
-          data.forEach(item => {
-            const card = document.createElement("article");
-            card.className = "card";
-            card.innerHTML = `
-              <figure><img src="${item.image}" alt="${item.title}"></figure>
-              <div>
-                <h2>${item.title}</h2>
-                <address>${item.address}</address>
-                <p>${item.description}</p>
-                <button>Más información</button>
-              </div>
-            `;
-            cardsEl.appendChild(card);
-          });
-        })
-        .catch(err => {
-          cardsEl.innerHTML = "<p>No se pudieron cargar los lugares.</p>";
-        });
-    })();
-  </script>
+  <script src="scripts/discover.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Formulario Enviado</title>
+  <meta name="description" content="Página que muestra los datos enviados por el formulario." />
+  <meta name="author" content="Tu Nombre" />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="images/favicon.ico" alt="Logo" width="40" height="40"></a>
+      <h1>Gracias</h1>
+    </div>
+  </header>
+
+  <main>
+    <h2>Datos enviados</h2>
+    <div id="results"></div>
+    <p><a href="index.html">Volver al inicio</a></p>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="items.html">Catálogo</a></li>
+        <li><a href="about.html">Acerca</a></li>
+        <li><a href="form.html">Contacto</a></li>
+      </ul>
+  </main>
+
+  <script>
+    // Mostrar datos del query string (method="GET")
+    const params = new URLSearchParams(location.search);
+    const out = document.getElementById('results');
+    if (!params.toString()) {
+      out.innerHTML = '<p>No se enviaron datos.</p>';
+    } else {
+      const dl = document.createElement('dl');
+      for (const [k,v] of params.entries()) {
+        const dt = document.createElement('dt'); dt.textContent = k;
+        const dd = document.createElement('dd'); dd.textContent = v;
+        dl.appendChild(dt); dl.appendChild(dd);
+      }
+      out.appendChild(dl);
+    }
+  </script>
+</body>
+</html>

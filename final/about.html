@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyecto Final — Acerca</title>
+  <meta name="description" content="Página acerca del autor y el proyecto." />
+  <meta name="author" content="Tu Nombre" />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="images/favicon.ico" alt="Logo" width="40" height="40"></a>
+      <h1>Acerca del Proyecto</h1>
+    </div>
+
+    <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir navegación">☰</button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal" hidden>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="items.html">Catálogo</a></li>
+        <li><a href="about.html">Acerca</a></li>
+        <li><a href="form.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <article>
+      <h2>Sobre mí</h2>
+      <p>Escribe aquí una breve presentación; tus objetivos académicos y profesionales.</p>
+
+      <h3>Cómo funciona este proyecto</h3>
+      <ol>
+        <li>Los datos provienen de <code>data/items.json</code>.</li>
+        <li>JS modular usa Fetch y genera dinámicamente al menos 15 ítems.</li>
+        <li>Se usa localStorage para recordar la preferencia de vista.</li>
+      </ol>
+    </article>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="items.html">Catálogo</a></li>
+        <li><a href="about.html">Acerca</a></li>
+        <li><a href="form.html">Contacto</a></li>
+      </ul>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Tu Nombre</p>
+    <p><a href="assets/attributions.html">Atribuciones</a></p>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

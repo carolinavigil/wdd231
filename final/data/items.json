@@ -1,0 +1,139 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "title": "Producto 1",
+      "shortDesc": "Descripción corta del producto 1.",
+      "description": "Descripción más detallada del producto 1, incluyendo características y uso recomendado.",
+      "price": "S/.12.00",
+      "image": "images/item-01.svg",
+      "featured": false
+    },
+    {
+      "id": "2",
+      "title": "Producto 2",
+      "shortDesc": "Descripción corta del producto 2.",
+      "description": "Descripción más detallada del producto 2, incluyendo características y uso recomendado.",
+      "price": "S/.14.00",
+      "image": "images/item-02.svg",
+      "featured": false
+    },
+    {
+      "id": "3",
+      "title": "Producto 3",
+      "shortDesc": "Descripción corta del producto 3.",
+      "description": "Descripción más detallada del producto 3, incluyendo características y uso recomendado.",
+      "price": "S/.16.00",
+      "image": "images/item-03.svg",
+      "featured": true
+    },
+    {
+      "id": "4",
+      "title": "Producto 4",
+      "shortDesc": "Descripción corta del producto 4.",
+      "description": "Descripción más detallada del producto 4, incluyendo características y uso recomendado.",
+      "price": "S/.18.00",
+      "image": "images/item-04.svg",
+      "featured": false
+    },
+    {
+      "id": "5",
+      "title": "Producto 5",
+      "shortDesc": "Descripción corta del producto 5.",
+      "description": "Descripción más detallada del producto 5, incluyendo características y uso recomendado.",
+      "price": "S/.20.00",
+      "image": "images/item-05.svg",
+      "featured": false
+    },
+    {
+      "id": "6",
+      "title": "Producto 6",
+      "shortDesc": "Descripción corta del producto 6.",
+      "description": "Descripción más detallada del producto 6, incluyendo características y uso recomendado.",
+      "price": "S/.22.00",
+      "image": "images/item-06.svg",
+      "featured": true
+    },
+    {
+      "id": "7",
+      "title": "Producto 7",
+      "shortDesc": "Descripción corta del producto 7.",
+      "description": "Descripción más detallada del producto 7, incluyendo características y uso recomendado.",
+      "price": "S/.24.00",
+      "image": "images/item-07.svg",
+      "featured": false
+    },
+    {
+      "id": "8",
+      "title": "Producto 8",
+      "shortDesc": "Descripción corta del producto 8.",
+      "description": "Descripción más detallada del producto 8, incluyendo características y uso recomendado.",
+      "price": "S/.26.00",
+      "image": "images/item-08.svg",
+      "featured": false
+    },
+    {
+      "id": "9",
+      "title": "Producto 9",
+      "shortDesc": "Descripción corta del producto 9.",
+      "description": "Descripción más detallada del producto 9, incluyendo características y uso recomendado.",
+      "price": "S/.28.00",
+      "image": "images/item-09.svg",
+      "featured": true
+    },
+    {
+      "id": "10",
+      "title": "Producto 10",
+      "shortDesc": "Descripción corta del producto 10.",
+      "description": "Descripción más detallada del producto 10, incluyendo características y uso recomendado.",
+      "price": "S/.30.00",
+      "image": "images/item-10.svg",
+      "featured": false
+    },
+    {
+      "id": "11",
+      "title": "Producto 11",
+      "shortDesc": "Descripción corta del producto 11.",
+      "description": "Descripción más detallada del producto 11, incluyendo características y uso recomendado.",
+      "price": "S/.32.00",
+      "image": "images/item-11.svg",
+      "featured": false
+    },
+    {
+      "id": "12",
+      "title": "Producto 12",
+      "shortDesc": "Descripción corta del producto 12.",
+      "description": "Descripción más detallada del producto 12, incluyendo características y uso recomendado.",
+      "price": "S/.34.00",
+      "image": "images/item-12.svg",
+      "featured": true
+    },
+    {
+      "id": "13",
+      "title": "Producto 13",
+      "shortDesc": "Descripción corta del producto 13.",
+      "description": "Descripción más detallada del producto 13, incluyendo características y uso recomendado.",
+      "price": "S/.36.00",
+      "image": "images/item-13.svg",
+      "featured": false
+    },
+    {
+      "id": "14",
+      "title": "Producto 14",
+      "shortDesc": "Descripción corta del producto 14.",
+      "description": "Descripción más detallada del producto 14, incluyendo características y uso recomendado.",
+      "price": "S/.38.00",
+      "image": "images/item-14.svg",
+      "featured": false
+    },
+    {
+      "id": "15",
+      "title": "Producto 15",
+      "shortDesc": "Descripción corta del producto 15.",
+      "description": "Descripción más detallada del producto 15, incluyendo características y uso recomendado.",
+      "price": "S/.40.00",
+      "image": "images/item-15.svg",
+      "featured": true
+    }
+  ]
+}

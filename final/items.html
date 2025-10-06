@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Proyecto Final — Catálogo</title>
+  <meta name="description" content="Catálogo dinámico generado desde un JSON local." />
+  <meta name="author" content="Tu Nombre" />
+  <link rel="icon" href="images/favicon.png" />
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html"><img src="images/favicon.ico" alt="Logo" width="40" height="40"></a>
+      <h1>Catálogo</h1>
+    </div>
+
+    <button id="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Abrir navegación">☰</button>
+
+    <nav id="primary-nav" class="primary-nav" aria-label="Navegación principal" hidden>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="items.html">Catálogo</a></li>
+        <li><a href="about.html">Acerca</a></li>
+        <li><a href="form.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section aria-labelledby="catalog-title">
+      <h2 id="catalog-title">Productos</h2>
+
+      <div class="controls">
+        <label for="view-toggle">Vista:</label>
+        <select id="view-toggle">
+          <option value="grid">Cuadrícula</option>
+          <option value="list">Lista</option>
+        </select>
+
+        <label for="filter-input">Buscar:</label>
+        <input id="filter-input" type="search" placeholder="Buscar por título...">
+      </div>
+
+      <div id="items-container" class="items-grid" aria-live="polite"></div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="items.html">Catálogo</a></li>
+        <li><a href="about.html">Acerca</a></li>
+        <li><a href="form.html">Contacto</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Tu Nombre</p>
+    <p><a href="assets/attributions.html">Atribuciones</a></p>
+  </footer>
+
+  <!-- Modal accesible (básico) -->
+  <div id="modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+    <div class="modal-content" role="document">
+      <button class="modal-close" aria-label="Cerrar">Cerrar</button>
+      <div class="modal-body"></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
